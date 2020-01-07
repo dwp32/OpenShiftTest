@@ -1,17 +1,19 @@
 <?php
-#phpinfo();
-#die;
+#  phpinfo();
+#  die;
 
-$rgbColor = array();
+$color = substr(str_shuffle('ABCDEF0123456789'), 0, 6);
+$colors[$color] = '#' . $color;
 
-//Create a loop.
-foreach(array('r', 'g', 'b') as $color){
-    //Generate a random number between 0 and 255.
-    $rgbColor[$color] = mt_rand(0, 255);
-}
+echo "<!DOCTYPE html>";
+echo "<html>";
+echo "<head>";
+echo "<style>";
+echo "body {";
+echo "    background-color: #$color;";
+echo "}";
+echo "</style>";
+echo "</head>";
+echo "</html>";
 
-var_dump($rgbColor);
-<div style="background-color: rgb(<?= implode(",", $rgbColor); ?>);">
-    Random Color!
-</div>
 ?>
