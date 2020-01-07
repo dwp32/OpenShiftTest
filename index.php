@@ -1,6 +1,6 @@
 <?php
-  phpinfo();
-  die;
+ # phpinfo();
+ # die;
 #var_dump($_POST);
 
 if(isset($_POST['color']))
